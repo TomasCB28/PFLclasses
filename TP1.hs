@@ -11,3 +11,6 @@ count str = show (length str) ++ " characters."
 
 second :: [a] -> a
 second xs = head (tail xs)
+
+ledthalf xs = take half xs
+  where half = length xs 'div' 2
