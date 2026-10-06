@@ -14,3 +14,20 @@ second xs = head (tail xs)
 
 ledthalf xs = take half xs
   where half = length xs 'div' 2
+
+--ficha 3
+myand::[Bool] -> Bool
+myand [] = True
+myand (x:xs) = x && myand xs
+
+myor:: [Bool] -> Bool
+myor [] = False
+myor(x:xs) = x || myor xs
+
+myconcat :: [[a]] -> [a]
+myconcat []= []
+myconcat (x:xs) = x ++ myconcat xs
+
+myappend :: [a] -> [a] -> [a]
+myappend [] ys = ys
+myappend (z:zs) ys = z : myappend zs ys 
