@@ -31,3 +31,13 @@ myconcat (x:xs) = x ++ myconcat xs
 myappend :: [a] -> [a] -> [a]
 myappend [] ys = ys
 myappend (z:zs) ys = z : myappend zs ys 
+
+myreverse :: [a] -> [a]
+myreverse []=[]
+myreverse (x:xs) = (myreverse xs) ++ [x]
+
+insert :: Ord a => a -> [a] -> [a]
+insert x [] = [x]
+insert x(y:ys)
+    | x > y = y: insert x ys
+    | otherwise = x : (y:ys)
